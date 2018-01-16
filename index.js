@@ -12,10 +12,13 @@ client.on('message', msg => {
     const args = msg.content.split(' ').slice(1).join(' ');
     if (command === 'help') return msg.channel.send('This bot is currently undergoing maintenance');
     else if (command === 'invite') return msg.channel.send(process.env.INVITE);
-    if (!msg.content.startsWith(process.env.PREFIX) || !msg.staff) return;
+});
+
+client.on('message', msg => {
+    if (!msg.content.startsWith(process.env.PREFIX) || !msg.guide) return;
     const command = msg.content.split(' ')[0].substr(process.env.PREFIX.length);
     const args = msg.content.split(' ').slice(1).join(' ');
-    if (command === 'staff') return msg.channel.send('Only staff members that show is: Justin A.K.A JustinFromMCPE and Doge A.K.A TBNRItzDoge');
+    if (command === 'staff') return msg.channel.send('The command `:staff` worked!');
     else if (command === 'invite') return msg.channel.send(process.env.INVITE);
 });
 
