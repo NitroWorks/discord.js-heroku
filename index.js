@@ -11,10 +11,10 @@ client.on('message', msg => {
     const command = msg.content.split(' ')[0].substr(process.env.PREFIX.length);
     const args = msg.content.split(' ').slice(1).join(' ');
     if (command === 'help') return msg.channel.send('This bot is currently undergoing maintenance');
-    if (command === 'staff') return msg.channel.send('The command `:staff` worked!');
-    if (command === 'info') return msg.channel.send('This command is blocked.');
-    if (command === 'channel') return msg.channel.send('This command is blocked.');
-    if (command === 'admin') return msg.channel.send('This command is blocked.');
+    if (command === 'staff') return msg.channel.send('That command is blocked.');
+    if (command === 'info') return msg.channel.send('That command is blocked.');
+    if (command === 'channel') return msg.channel.send('That command is blocked.');
+    if (command === 'admin') return msg.channel.send('That command is blocked.');
     else if (command === 'invite') return msg.channel.send(process.env.INVITE);
 });
 
