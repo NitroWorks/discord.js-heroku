@@ -15,7 +15,7 @@ client.on('message', msg => {
 });
 
 client.on('message', msg => {
-    if (!msg.content.startsWith(process.env.PREFIX) || !msg.guide) return;
+    if (!msg.content.startsWith(process.env.PREFIX) || !msg.staff) return;
     const command = msg.content.split(' ')[0].substr(process.env.PREFIX.length);
     const args = msg.content.split(' ').slice(1).join(' ');
     if (command === 'staff') return msg.channel.send('The command `:staff` worked!');
