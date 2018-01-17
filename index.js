@@ -10,7 +10,7 @@ client.on('message', msg => {
     if (!msg.content.startsWith(process.env.PREFIX) || !msg.guild) return;
     const command = msg.content.split(' ')[0].substr(process.env.PREFIX.length);
     const args = msg.content.split(' ').slice(1).join(' ');
-    if (command === 'help') return msg.channel.send('```**Nitro Network**``` \n **Commands:** \n !!help - Gives you all the commands');
+    if (command === '') return msg.channel.send('**Nitro Network** \n **Commands:** \n !!help - Gives you all the commands');
     if (command === 'staff') return msg.channel.send('```That command is blocked.```');
     if (command === 'invite') return msg.channel.send('```Invite LINK:``` **https://discord.me/nitronetwork**');
     if (command === 'channel') return msg.channel.send('```That command is blocked.```');
