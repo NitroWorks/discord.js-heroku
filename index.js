@@ -12,7 +12,7 @@ client.on('message', msg => {
     const args = msg.content.split(' ').slice(1).join(' ');
     if (command === 'help') return msg.channel.send('This bot is currently undergoing maintenance');
     if (command === 'staff') return msg.channel.send('That command is blocked.');
-    if (command === 'invite') return msg.channel.send(' 'Invite LINK: https://discord.me/nitronetwork' ');
+    if (command === 'invite') return msg.channel.send('Invite LINK: https://discord.me/nitronetwork');
     if (command === 'channel') return msg.channel.send('That command is blocked.');
     if (command === 'admin') return msg.channel.send('That command is blocked.');
     else if (command === 'invite') return msg.channel.send(process.env.INVITE);
